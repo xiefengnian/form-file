@@ -48,7 +48,7 @@ form.addEventListener('submit', function (e) {
 ```javascript
 
 //引入FormFile
-var FormFile = require('./FormFile/FormFile')
+var FormFile = require('form-file')
 
 //express监听'/upload'端口
 app.post('/upload',function(req,res){
