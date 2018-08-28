@@ -25,18 +25,20 @@ class BinaryParser {
                 if (value[0] == '"' && value[value.length - 1] == '"') {
                     value = value.slice(1, value.length - 1)
                 }
-                headersObj = {
-                    ...headersObj,
-                    [key]: value
-                }
+                // headersObj = {
+                //     ...headersObj,
+                //     [key]: value
+                // }
+                headersObj[key] = value
             }
             if (e.indexOf(':') > -1) {
                 var key = e.split(':')[0]
                 var value = e.split(':')[1]
-                headersObj = {
-                    ...headersObj,
-                    [key]: value
-                }
+                headersObj[key] = value
+                // headersObj = {
+                //     ...headersObj,
+                //     [key]: value
+                // }
             }
         })
         return headersObj
