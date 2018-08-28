@@ -5,7 +5,7 @@
 ## How To Use 使用
 
 
-在HTML中
+在HTML中，按照普通的方式提交就可以了，不需要任何特殊的处理。
 
 ```html
 <!-- form表单提交 -->
@@ -15,6 +15,9 @@
     <input type="submit" value="提交">
 </form>
 ```
+
+或者使用JavaScript的ajax提交
+
 ```javascript
 //ajax提交
 var form = document.querySelector('#form')
@@ -112,6 +115,8 @@ http.createServer((req,res)=>{
 }).listen(3000)
 ```
 
+## support files 支持的文件类型
+    `image/png` `image/jpeg` `text/plain`
 
 ## ToDo 未完成
 

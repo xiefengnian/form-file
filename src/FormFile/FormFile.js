@@ -56,14 +56,13 @@ class FormFile {
             this.finalResult[e.headers.name] = {
                 error: 'can not parse this type of file "' + headers['Content-Type'] + '"'
             }
-            console.log(e.headers)
-            fs.writeFile(path.resolve('./binaryTestFile' , e.headers.name + Math.random().toFixed(5)), binary, function (err) {
-                if (err) {
-                    console.log(err)
-                    return
-                }
-                console.log('写入了暂不支持的测试文件')
-            })
+            // fs.writeFile(path.resolve('./binaryTestFile' , e.headers.name + Math.random().toFixed(5)), binary, function (err) {
+            //     if (err) {
+            //         console.log(err)
+            //         return
+            //     }
+            //     console.log('写入了暂不支持的测试文件')
+            // })
 
             this._processTimes++
             if (this._processTimes == length) {
@@ -74,10 +73,7 @@ class FormFile {
             return
         }
         //解析出内容的二进制数据
-        console.log(binary.length)
-        console.log(binary.indexOf(typeBegin))
         var contentBinary = binary.slice(binary.indexOf(typeBegin), binary.length - boundaryLength)
-        console.log(contentBinary.length)
         //获取解析的头携带的文件名（上传时的文件名）
         var fileName = headers.filename
 

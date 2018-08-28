@@ -1,7 +1,7 @@
 {
   "name": "form-file",
   "description": "为了解决formidable在一个form中上传文件后就无法上传其他数据的问题写的组件",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "index.js",
   "directories": {
     "example": "example"
