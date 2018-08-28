@@ -4,6 +4,9 @@
 
 ## How To Use 使用
 
+在一个node项目中使用`npm`安装
+
+> cnpm i form-file --save
 
 在HTML中，按照普通的方式提交就可以了，不需要任何特殊的处理。
 
