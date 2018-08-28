@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/upload" method="POST" enctype="multipart/form-data" id="form">
+        <div>
+            <input type="file" id="file" name="zip">
+        </div>
+
+        <input type="submit" value="提交">
+    </form>
+
+    <script>
+        var form = document.querySelector('#form')
+        form.addEventListener('submit', function (e) {
+            e.preventDefault()
+            var uploadFile = function () {
+                var formData = new FormData(document.getElementById('form'))
+                var xhr = new XMLHttpRequest
+                xhr.open('POST','/upload')
+                xhr.send(formData)
+                xhr.onreadystatechange = function(){
+                    if(this.readyState == 4){
+                        console.log(xhr.response)
+                    }
+                }
+            }
+            uploadFile()
+        })
+
+
+
+    </script>
+</body>
+
+</html>
