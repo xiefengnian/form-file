@@ -121,7 +121,8 @@ http.createServer((req,res)=>{
 ```
 
 ## support files 支持的文件类型
-    `image/png` `image/jpeg` `text/plain`
+
+`image/png` `image/jpeg` `text/plain`
 
 ## ToDo 未完成
 
